@@ -1,0 +1,28 @@
+{% extends 'trainee/base.html' %}
+{% block content %}
+<div class="container">
+    <h3 style="text-align:center;">Training Center List</h3>
+        <div class="table-responsive mx-auto">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Training Center Name</th>
+                        <th>Location</th>
+                        
+                        <!-- Add more columns as needed -->
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for center in centers %}
+                    <tr>
+                        <td>{{ center.name }}</td>
+                        <td>{{ center.location }}</td>
+                        
+                        <!-- Add more columns as needed -->
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

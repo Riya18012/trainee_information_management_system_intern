@@ -1,0 +1,197 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure that the content fills the viewport height */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+header {
+    background-color: #318e98;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+    flex: 1; /* Allow the main content to grow and fill the remaining space */
+}
+
+footer {
+    background-color: #318e98;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Additional styles specific to pages can be added below */
+.intro {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.navbar {
+    margin-bottom: 20px; /* Add some space below the Navbar */
+}
+/* Adjust the Navbar dropdown width */
+.navbar .dropdown-menu {
+    min-width: 200px; /* Set the desired width for the dropdown menu */
+}
+
+/* Style the Navbar active link */
+.navbar .nav-item.active .nav-link {
+    font-weight: bold;
+}
+
+/* Style the Navbar dropdown items */
+.dropdown-item {
+    color: #333;
+}
+
+/* Add some space between the dropdown items */
+.dropdown-item + .dropdown-item {
+    margin-top: 0.25rem;
+}
+
+/* Style for the contact items section */
+.contact {
+    padding: 50px 0;
+}
+
+/* Style for each contact item */
+.contact-item {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-item i {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.contact-item h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.contact-item p {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+/* Adjust layout for larger screens */
+@media (min-width: 768px) {
+    .contact-item {
+        text-align: left;
+    }
+}
+
+
+/* Style for the form container */
+.container {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the form */
+.form-style {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Style for form input fields */
+.form-control {
+    margin-bottom: 15px;
+}
+
+/* Style for the submit button */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* Override default Bootstrap input focus */
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f8f9fa; /* Light gray background color */
+    box-shadow: 0px 0px 10px rgba(23,45,21,78); /* Optional box shadow */
+}
+
+button[type="submit"] {
+    background-color: #22ad55;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Center the hero section content both vertically and horizontally */
+
+
+.hero-content {
+    max-width: 800px; /* Set a maximum width for the content */
+    padding: 40px; /* Add some padding around the content */
+    border: 1px solid #ccc; /* Add a border for visibility */
+    background-color: white; /* Set a background color for the content area */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}

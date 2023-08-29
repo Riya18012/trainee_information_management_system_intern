@@ -1,0 +1,30 @@
+{% extends 'trainee/base.html' %}
+{% block content %}
+<div class="container">
+    <h2 style="text-align:center;">Courses</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>course title</th>
+                        <th>Description</th>
+                        <th>Trainer</th>
+                        <th>Training Center</th>
+                        <!-- Add more columns as needed -->
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for course in courses %}
+                    <tr>
+                        <td>{{ course.title }}</td>
+                        <td>{{ course.description }}</td>
+                        <td>{{ course.trainer }}</td>
+                        <td>{{ course.training_center.name }}</td>
+                        <!-- Add more columns as needed -->
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+</div>
+{% endblock %}

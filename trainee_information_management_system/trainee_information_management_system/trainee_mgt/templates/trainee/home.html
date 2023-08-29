@@ -1,0 +1,38 @@
+{% extends 'trainee/base.html' %}
+{% load static %}
+{% block content %}
+<section class="hero d-flex justify-content-center align-items-center">
+    <div class="hero-content text-center">
+        <h1 class="text-center">Welcome to the Trainee Information Management System</h1>
+        <p>Effortlessly manage and organize trainee information with our advanced system.</p>
+        <a href="{% url 'about' %}" class="btn btn-primary">Learn More</a>
+    </div>
+</section>
+
+<section class="features">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <h3>Centralized Database</h3>
+                    <p>Store all information regarding all the models in one secure and organized place.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <h3>Customizable Profiles</h3>
+                    <p>Create profiles for each trainee and trainer, including personal details and progress tracking.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <h3>Progress Tracking</h3>
+                    <p>Monitor trainee progress, enrollment and issued certificate information.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Add more sections as needed -->
+{% endblock %}
+

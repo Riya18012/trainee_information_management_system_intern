@@ -1,0 +1,137 @@
+{% extends 'trainee/base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    /* Override the background color */
+body {
+    background-color: #f8f9fa;
+}
+
+/* Style for the multicolored text */
+.multicolortext {
+    background-image: linear-gradient(to left, indigo, violet, indigo);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Style for lead text */
+.lead {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Arial;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Style for the jumbotron */
+.jumbotron {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    background-color: #f2f2f2;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .jumbotron {
+        padding: 30px;
+    }
+}
+
+</style>
+<div class="container mt-4">
+    <div class="jumbotron" style="background-color:powderblue;">
+        <h1 class="display-4">
+            <span class="multicolortext"><b>Welcome to the Trainee Information Management System!</b></span>
+        </h1><br>
+        <p class="lead">This dashboard is our central hub for managing trainers, trainees, courses, and enrollments at the Models Training Center.</p>
+        <hr class="my-4">
+        <p>Stay organized and keep track of your educational programs with ease using our intuitive dashboard interface.</p>
+        <a class="btn btn-primary btn-lg" href="{% url 'about' %}" role="button">Learn more</a>
+    </div><br>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card bg-success text-white">
+                <div class="card-body">
+                    <h5 class="card-title">Trainees</h5>
+                    <p class="card-text">View and manage trainees.</p>
+                    <p>Number of Trainees: {{ num_trainees }}</p>
+                    <a href="{% url 'trainee_list' %}" class="btn btn-light">Go to Trainees</a>
+                    <hr>
+                    <a href="{% url 'add_trainee' %}" class="btn btn-light">Add Trainees</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-primary text-white">
+                <div class="card-body">
+                    <h5 class="card-title">Trainers</h5>
+                    <p class="card-text">View and manage trainers.</p>
+                    <p>Number of Trainers: {{ num_trainers }}</p>
+                    <a href="{% url 'trainer_list' %}" class="btn btn-light">Go to Trainers</a><hr>
+                    <a href="{% url 'add_trainer' %}" class="btn btn-light">Add Trainers</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-info text-white">
+                <div class="card-body">
+                    <h5 class="card-title">Courses</h5>
+                    <p class="card-text">View and manage courses.</p>
+                    <p>Number of Courses: {{ num_courses }}</p>
+                    <a href="{% url 'course_list' %}" class="btn btn-light">Go to Courses</a>
+                    <hr>
+                    <a href="{% url 'add_course' %}" class="btn btn-light">Manage Courses</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-secondary text-white">
+                <div class="card-body">
+                    <h5 class="card-title">Enrollments</h5>
+                    <p class="card-text">View and manage enrollments.</p>
+                    <p>Number of Enrollments: {{ num_enrollments }}</p>
+                    <a href="{% url 'enrollment_list' %}" class="btn btn-light">Go to Enrollments</a>
+                    <hr>
+                    <a href="{% url 'add_enrollment' %}" class="btn btn-light">Make Enrollments</a>
+                </div>
+            </div>
+        </div>
+        <div>
+          <br>  
+        </div>
+        <div class="col-md-3 offset-md-3">
+            <div class="card bg-warning text-white">
+                <div class="card-body">
+                    <h5 class="card-title">Training centers</h5>
+                    
+                    <p class="card-text">View and manage training centers.</p>
+                    <p>Number of Training Centers: {{ num_training_centers}}</p>
+                    <a href="{% url 'training_center_list' %}" class="btn btn-light">View training centers</a><hr>
+                    <a href="{% url 'add_training_center' %}" class="btn btn-light">Add training centers</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-danger text-white">
+                <div class="card-body">
+                    <h5 class="card-title">Certificates</h5>
+                    <p class="card-text">View and manage certificates.</p>
+                    <p>Number of Certificates: {{ num_certificates }}</p>
+                    <a href="{% url 'certificate_list' %}" class="btn btn-light">View issued certificates</a><hr>
+                    <a href="{% url 'add_certificate' %}" class="btn btn-light">Add a trainee for certificate</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+{% endblock %}

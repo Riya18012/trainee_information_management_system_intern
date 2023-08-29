@@ -1,0 +1,33 @@
+{% extends 'trainee/base.html' %}
+{% block content %}
+<div class="container mt-4">
+
+
+    <h2 style="text-align:center;">Enrollments</h2>
+    <div class="table-responsive">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Trainee Name</th>
+                <th>Course Name</th>
+                <th>Enrollment Date</th>
+                <th>Training Period</th>
+                <!-- Add more columns as needed -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for enrollment in enrollments %}
+            <tr>
+                <td>{{ enrollment.trainee.first_name }}</td>
+                <td>{{ enrollment.course.title }}</td>
+                <td>{{ enrollment.enrollment_date }}</td>
+                <td>{{ enrollment.training_period }}</td>
+                <!-- Add more columns as needed -->
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+</div>
+{% endblock %}
